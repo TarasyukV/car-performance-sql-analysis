@@ -6,6 +6,6 @@ The main objective is to derive insights that can help understand how performanc
 ## Dataset
 
 - **Source:** [Kaggle – Sports Car Dataset](https://www.kaggle.com/datasets/sadiajavedd/sports-car-speed-power-and-pricing-dataset)
-- **Format:** Excel / CSV
+- **Format:** CSV
 - **About dataset:**  
   This dataset contains information about high-performance sports cars from various manufacturers and model years. It includes key technical specifications, performance metrics, and pricing data that allow analysis of how vehicle performance and brand relate to market price. The dataset covers attributes such as engine type and size, horsepower, torque, acceleration (0–60 mph), model year, and price in USD.
