@@ -30,6 +30,7 @@ Before performing the analysis, several data cleaning and transformation steps w
 3. The value `No Electric` was assigned to `type_of_engine` for all remaining records with a specified engine size.
 4. All `N/A` values across the dataset were replaced with `NULL` to ensure proper handling of missing data.
 5. In the `horsepower` column, non-numeric symbols (such as `+` in values like `1000+`) were removed, and the column was converted to a numeric data type to allow accurate aggregations.
+   
    5.1 The same cleaning logic was applied to the `torque` column.
 6. The `price_usd` column was converted to a numeric format by removing thousands separators and ensuring consistent numeric values.
 
