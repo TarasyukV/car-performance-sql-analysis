@@ -19,4 +19,4 @@ The main objective is to derive insights that can help understand how performanc
 - horsepower (integer)
 - torque (integer)
 - zero_to_sixty_time (numeric, seconds)
-- price_usd (numeric)
+- price_in_usd (numeric)
