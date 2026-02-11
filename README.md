@@ -24,10 +24,10 @@ The main objective is to derive insights that can help understand how performanc
 
 Before performing the analysis, several data cleaning and transformation steps were applied to prepare the dataset for accurate SQL querying:
 
-1. A new column `type_of_engine` was created to distinguish between electric and non-electric vehicles.
-2. All values labeled as `Electric` were moved from the `engine_size` column to the `type_of_engine` column.  
+1. A new column `engine_type` was created to distinguish between electric and non-electric vehicles.
+2. All values labeled as `Electric` were moved from the `engine_size` column to the `engine_type` column.  
    The corresponding values in `engine_size` were replaced with `NULL`.
-3. The value `No Electric` was assigned to `type_of_engine` for all remaining records with a specified engine size.
+3. The value `No Electric` was assigned to `engine_type` for all remaining records with a specified engine size.
 4. All `N/A` values across the dataset were replaced with `NULL` to ensure proper handling of missing data.
 5. In the `horsepower` column, non-numeric symbols (such as `+` in values like `1000+`) were removed, and the column was converted to a numeric data type to allow accurate aggregations.
    
