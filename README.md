@@ -43,7 +43,8 @@ These steps ensured consistent data types and improved data quality for reliable
 
 To evaluate performance efficiency, a custom **Performance Index** was developed:
 
-Performance Index = Average Horsepower / Average 0–60 Acceleration Time
+Performance Index = AVG(Horsepower) / AVG(0–60 Time)
+
 
 This metric measures how much average power output a brand generates per second of acceleration.
 
