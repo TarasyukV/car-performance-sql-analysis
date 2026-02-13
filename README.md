@@ -69,3 +69,14 @@ To ensure statistical reliability:
 
 - **Brands with broader portfolios tend to show lower performance intensity.**
   This suggests a strategic balance between performance, scalability, and market positioning.
+
+# Business Question 2
+## How does horsepower influence vehicle pricing across different performance segments?
+
+### Created Metric
+Horsepower groups (100 HP intervals) to identify price behavior across performance tiers.
+
+### Key Insights
+- Average vehicle price increases gradually up to the 600 HP range.
+- A sharp price acceleration occurs beyond 700 HP, indicating entry into a premium / hypercar segment.
+- Vehicles exceeding 1200 HP show extreme price escalation, suggesting ultra-exclusive positioning.
