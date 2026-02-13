@@ -1,4 +1,4 @@
-/*
+
 ============================================================
 Project: car-performance-sql-analysis
 Author: Volodymyr Tarasyuk
@@ -6,11 +6,11 @@ Description:
 This file contains all SQL queries used to answer
 the business questions described in the README file.
 ============================================================
-*/
-/* ============================================================
+
+============================================================
 Business Question 1:
 Performance Efficiency Ranking
-============================================================ */
+============================================================ 
 SELECT 
     car_make,
     ROUND(AVG(horsepower),2) AS avg_hp,
