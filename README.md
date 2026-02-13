@@ -36,5 +36,35 @@ Before performing the analysis, several data cleaning and transformation steps w
 
 These steps ensured consistent data types and improved data quality for reliable analytical results.
 
-# 🔎 Business Question 1  
+# Business Question 1  
 ## Which automotive brands demonstrate the highest performance efficiency?
+
+## Created Metric
+
+To evaluate performance efficiency, a custom **Performance Index** was developed:
+
+Performance Index = Average Horsepower / Average 0–60 Acceleration Time
+
+This metric measures how much average power output a brand generates per second of acceleration.
+
+### Why this metric?
+
+- Horsepower alone does not fully describe performance.
+- Acceleration time alone does not capture engine capability.
+- Combining both allows for a more balanced performance efficiency comparison.
+
+To ensure statistical reliability:
+- Only non-electric vehicles were included.
+- Records with missing horsepower or acceleration values were excluded.
+- Brands with fewer than 3 models were filtered out.
+
+## 📈 Key Insights
+
+- **Hypercar manufacturers dominate performance efficiency rankings.**
+  Rimac, Bugatti, and Koenigsegg significantly outperform traditional luxury performance brands.
+
+- **A clear performance tier structure exists in the market.**
+  Hypercar brands form a distinct upper segment, followed by luxury performance manufacturers.
+
+- **Brands with broader portfolios tend to show lower performance intensity.**
+  This suggests a strategic balance between performance, scalability, and market positioning.
