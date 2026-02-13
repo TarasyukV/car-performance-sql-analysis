@@ -76,7 +76,7 @@ To ensure statistical reliability:
 ### Created Metric
 Horsepower groups (100 HP intervals) to identify price behavior across performance tiers.
 
-### Key Insights
+### 📈 Key Insights
 - Average vehicle price increases gradually up to the 600 HP range.
 - A sharp price acceleration occurs beyond 700 HP, indicating entry into a premium / hypercar segment.
 - Vehicles exceeding 1200 HP show extreme price escalation, suggesting ultra-exclusive positioning.
