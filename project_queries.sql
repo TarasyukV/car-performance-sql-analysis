@@ -32,7 +32,7 @@ LIMIT 10;
 
 
 /* ====================================================
-Business Question 1:
+Business Question 2:
 How does horsepower influence vehicle pricing 
 across different performance segments?
 ====================================================
