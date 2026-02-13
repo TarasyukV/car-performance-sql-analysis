@@ -9,7 +9,7 @@ the business questions described in the README file.
 
 /* ============================================================
 Business Question 1:
-Performance Efficiency Ranking
+Which automotive brands demonstrate the highest performance efficiency?
 ============================================================ */
 SELECT 
     car_make,
