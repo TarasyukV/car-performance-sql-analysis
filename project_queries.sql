@@ -32,6 +32,7 @@ LIMIT 5;
 Business Question 2:
 Which automotive brands demonstrate the highest performance efficiency?
 ============================================================ */
+
 SELECT 
     car_make,
     ROUND(AVG(horsepower),2) AS avg_hp,
@@ -49,21 +50,10 @@ HAVING COUNT(*) >= 3
 ORDER BY performance_index DESC
 LIMIT 10;
 
-
-
-
 /* ====================================================
 Business Question 3:
 How does horsepower influence vehicle pricing 
 across different performance segments?
-====================================================
-
-Logic:
-- Group horsepower into 100 HP intervals
-- Calculate average price per group
-- Exclude electric vehicles
-- Exclude null values
-- Keep only groups with sufficient observations
 ==================================================== */
 
 SELECT 
