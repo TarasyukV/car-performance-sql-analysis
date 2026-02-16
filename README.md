@@ -83,7 +83,7 @@ To ensure statistical reliability:
 - **Brands with broader portfolios tend to show lower performance intensity.**
   This suggests a strategic balance between performance, scalability, and market positioning.
 
-# Business Question 2
+# Business Question 3
 ## How does horsepower influence non electric vehicle pricing across different performance segments?
 
 ## Created Metric
