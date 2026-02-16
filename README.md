@@ -89,6 +89,11 @@ To ensure statistical reliability:
 ## Created Metric
 Horsepower groups (100 HP intervals) to identify price behavior across performance tiers.
 
+To ensure statistical reliability:
+- Only non-electric vehicles were included.
+- Records with missing horsepower values were excluded.
+- Brands with fewer than 5 models were filtered out.
+
 ## 📈 Key Insights
 - Average vehicle price increases gradually up to the 600 HP range.
 - A sharp price acceleration occurs beyond 700 HP, indicating entry into a premium / hypercar segment.
