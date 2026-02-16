@@ -71,7 +71,7 @@ To ensure statistical reliability:
   This suggests a strategic balance between performance, scalability, and market positioning.
 
 # Business Question 2
-## How does horsepower influence vehicle pricing across different performance segments?
+## How does horsepower influence non electric vehicle pricing across different performance segments?
 
 ### Created Metric
 Horsepower groups (100 HP intervals) to identify price behavior across performance tiers.
