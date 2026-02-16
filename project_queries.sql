@@ -7,8 +7,29 @@ This file contains all SQL queries used to answer
 the business questions described in the README file.
 ============================================================ */
 
+
 /* ============================================================
 Business Question 1:
+Which automotive brands have the widest product range in terms of pricing and performance?
+============================================================ */
+
+SELECT 
+    car_make
+    , MAX(price_in_usd) AS max_price
+    , MIN(price_in_usd) AS min_price
+    , MAX(price_in_usd) - MIN(price_in_usd) AS price_diff
+    , MAX(horsepower) - MIN(horsepower) AS horsepower_diff
+    , COUNT(*) AS total_models
+FROM cars
+WHERE price_in_usd IS NOT NULL
+  AND horsepower IS NOT NULL
+GROUP BY car_make
+HAVING COUNT(*) > 5
+ORDER BY price_diff DESC
+LIMIT 5;
+
+/* ============================================================
+Business Question 2:
 Which automotive brands demonstrate the highest performance efficiency?
 ============================================================ */
 SELECT 
@@ -32,7 +53,7 @@ LIMIT 10;
 
 
 /* ====================================================
-Business Question 2:
+Business Question 3:
 How does horsepower influence vehicle pricing 
 across different performance segments?
 ====================================================
