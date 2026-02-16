@@ -51,6 +51,20 @@ These steps ensured consistent data types and improved data quality for reliable
 - Brands with both high price and horsepower dispersion appear to target multiple customer segments, from entry-level performance to ultra-premium models.
 
 # Business Question 2 
+## Which brands dominate the ultra high-performance segment (700+ HP)?
+
+## Created Metric
+
+High-Performance Percentage (%) =
+(Number of models with horsepower > 700 × 100 ÷ Total models per brand) 
+
+## 📈 Key Insights
+
+- Brands with a high percentage are heavily focused on ultra-performance vehicles.
+- Lower percentages indicate either broader market positioning or mass-segment orientation.
+- This metric highlights specialization rather than absolute volume.
+
+# Business Question 3
 ## Which automotive brands demonstrate the highest performance efficiency?
 
 ## Created Metric
@@ -80,7 +94,7 @@ To ensure statistical reliability:
 
 - Brands with broader portfolios tend to show lower performance intensity. This suggests a strategic balance between performance, scalability, and market positioning.
 
-# Business Question 3
+# Business Question 4
 ## How does horsepower influence non electric vehicle pricing across different performance segments?
 
 ## Created Metric
