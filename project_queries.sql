@@ -30,6 +30,19 @@ LIMIT 5;
 
 /* ============================================================
 Business Question 2:
+Which brands dominate the ultra high-performance segment (700+ HP)?
+============================================================ */
+
+Select 
+	car_make 
+	, ROUND(SUM(CASE When horsepower > 700 THEN 1 ELSE 0 END)::numeric * 100 / COUNT(*),2) as high_tier_persentage 
+FROM cars 
+WHere horsepower IS NOT NULL 
+GROUP BY car_make 
+ORDER BY high_tier_persentage DESC
+
+/* ============================================================
+Business Question 3:
 Which automotive brands demonstrate the highest performance efficiency?
 ============================================================ */
 
@@ -51,7 +64,7 @@ ORDER BY performance_index DESC
 LIMIT 10;
 
 /* ====================================================
-Business Question 3:
+Business Question 4:
 How does horsepower influence vehicle pricing 
 across different performance segments?
 ==================================================== */
@@ -71,3 +84,9 @@ WHERE horsepower IS NOT NULL
 GROUP BY FLOOR(horsepower/100)
 Having COUNT(*) > 5
 ORDER BY FLOOR(horsepower/100);
+
+
+
+
+
+
