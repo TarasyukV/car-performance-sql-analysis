@@ -74,14 +74,11 @@ To ensure statistical reliability:
 
 ## 📈 Key Insights
 
-- **Hypercar manufacturers dominate performance efficiency rankings.**
-  Rimac, Bugatti, and Koenigsegg significantly outperform traditional luxury performance brands, with index values often 2–4x higher.
+- Hypercar manufacturers dominate performance efficiency rankings. Rimac, Bugatti, and Koenigsegg significantly outperform traditional luxury performance brands, with index values often 2–4x higher.
 
-- **A clear performance tier structure exists in the market.**
-  Hypercar brands form a distinct upper segment, followed by luxury performance manufacturers.
+- A clear performance tier structure exists in the market. Hypercar brands form a distinct upper segment, followed by luxury performance manufacturers.
 
-- **Brands with broader portfolios tend to show lower performance intensity.**
-  This suggests a strategic balance between performance, scalability, and market positioning.
+- Brands with broader portfolios tend to show lower performance intensity. This suggests a strategic balance between performance, scalability, and market positioning.
 
 # Business Question 3
 ## How does horsepower influence non electric vehicle pricing across different performance segments?
