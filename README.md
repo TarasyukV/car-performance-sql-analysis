@@ -36,7 +36,21 @@ Before performing the analysis, several data cleaning and transformation steps w
 
 These steps ensured consistent data types and improved data quality for reliable analytical results.
 
+
 # Business Question 1  
+## Which automotive brands have the widest product range in terms of pricing and performance?
+
+## Created Metric
+- Price Range = Max(price) − Min(price) per brand  
+- Horsepower Range = Max(horsepower) − Min(horsepower) per brand  
+- Only brands with more than 5 models were included to ensure statistical relevance
+
+## 📈 Key Insights
+
+- Certain brands demonstrate a significantly wider price range, indicating diversified market positioning.
+- Brands with both high price and horsepower dispersion appear to target multiple customer segments, from entry-level performance to ultra-premium models.
+
+# Business Question 2 
 ## Which automotive brands demonstrate the highest performance efficiency?
 
 ## Created Metric
@@ -44,7 +58,6 @@ These steps ensured consistent data types and improved data quality for reliable
 To evaluate performance efficiency, a custom **Performance Index** was developed:
 
 Performance Index = AVG(Horsepower) / AVG(0–60 Time)
-
 
 This metric measures how much average power output a brand generates per second of acceleration.
 
@@ -73,10 +86,10 @@ To ensure statistical reliability:
 # Business Question 2
 ## How does horsepower influence non electric vehicle pricing across different performance segments?
 
-### Created Metric
+## Created Metric
 Horsepower groups (100 HP intervals) to identify price behavior across performance tiers.
 
-### 📈 Key Insights
+## 📈 Key Insights
 - Average vehicle price increases gradually up to the 600 HP range.
 - A sharp price acceleration occurs beyond 700 HP, indicating entry into a premium / hypercar segment.
 - Vehicles exceeding 1200 HP show extreme price escalation, suggesting ultra-exclusive positioning.
