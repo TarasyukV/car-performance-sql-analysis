@@ -117,14 +117,14 @@ SELECT
     car_make,
     total_cars,
     luxury_cars,
-    persent_above_avg,
+    percentage_above_avg,
     CASE 
-        WHEN persent_above_avg >= 70 THEN 'Premuim'
-        WHEN persent_above_avg BETWEEN 40 AND 70 THEN 'Medium'
+        WHEN percentage_above_avg >= 70 THEN 'Premium'
+        WHEN percentage_above_avg BETWEEN 40 AND 70 THEN 'Medium'
         ELSE 'Low'
     END AS segment
 FROM persentage
-Order BY persent_above_avg DESC
+Order BY percentage_above_avg DESC
 
 
 
