@@ -35,11 +35,11 @@ Which brands dominate the ultra high-performance segment (700+ HP)?
 
 Select 
 	car_make 
-	, ROUND(SUM(CASE When horsepower > 700 THEN 1 ELSE 0 END)::numeric * 100 / COUNT(*),2) as high_tier_persentage 
+	, ROUND(SUM(CASE When horsepower > 700 THEN 1 ELSE 0 END)::numeric * 100 / COUNT(*),2) as high_tier_percentage 
 FROM cars 
 WHere horsepower IS NOT NULL 
 GROUP BY car_make 
-ORDER BY high_tier_persentage DESC
+ORDER BY high_tier_percentage DESC
 
 /* ============================================================
 Business Question 3:
