@@ -71,7 +71,7 @@ High-Performance Percentage (%) =
 
 To evaluate performance efficiency, a custom **Performance Index** was developed:
 
-Performance Index = AVG(Horsepower) / AVG(0–60 Time)
+Performance Index = AVG(Horsepower) ÷ AVG(0–60 Time)
 
 This metric measures how much average power output a brand generates per second of acceleration.
 
@@ -109,3 +109,21 @@ To ensure statistical reliability:
 - Average vehicle price increases gradually up to the 600 HP range.
 - A sharp price acceleration occurs beyond 700 HP, indicating entry into a premium / hypercar segment.
 - Vehicles exceeding 1200 HP show extreme price escalation, suggesting ultra-exclusive positioning.
+
+# Business Question 5
+## What percentage of each brand’s models are priced above the overall market average? 
+
+## Created Metric:
+Calculated the proportion of models for each brand that are priced above the market-wide average price.
+
+percentage_above_avg = (luxury_cars(cars with above market average price) ÷ total cars by brand) × 100
+
+## 📈 Key Insights:
+
+- Brands with a high percentage (≥70%) of models above average are classified as Premium, indicating strong pricing power.
+
+- Brands in the 40–70% range are Medium, showing a balanced mix of standard and above-average pricing.
+
+- Brands below 40% are Low, mostly offering models under the market average price.
+
+- This analysis helps identify which brands are positioned as premium versus mainstream in terms of pricing.
