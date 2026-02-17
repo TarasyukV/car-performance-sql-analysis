@@ -65,8 +65,7 @@ LIMIT 10;
 
 /* ====================================================
 Business Question 4:
-How does horsepower influence vehicle pricing 
-across different performance segments?
+How does horsepower influence vehicle pricing across different performance segments?
 ==================================================== */
 
 SELECT 
@@ -85,8 +84,47 @@ GROUP BY FLOOR(horsepower/100)
 Having COUNT(*) > 5
 ORDER BY FLOOR(horsepower/100);
 
+/* ====================================================
+Business Question 5:
+How does horsepower influence non electric vehicle pricing across different performance segments?
+==================================================== */
 
-
+WITH ap AS (
+    SELECT AVG(price_in_usd) AS avg_price
+    FROM cars)
+			
+, totalcars AS (
+    SELECT 
+        car_make,
+        COUNT(*) AS total_cars,
+        SUM(CASE 
+                WHEN price_in_usd > (SELECT avg_price FROM ap) 
+                THEN 1 
+                ELSE 0 
+            END) AS luxury_cars
+    FROM cars
+    GROUP BY car_make)
+    
+, persentage as (
+    SELECT 
+	car_make
+	, total_cars 
+	, luxury_cars
+       ,  ROUND((luxury_cars::numeric / total_cars) * 100, 2) AS percentage_above_avg
+    FROM totalcars )
+   
+SELECT
+    car_make,
+    total_cars,
+    luxury_cars,
+    persent_above_avg,
+    CASE 
+        WHEN persent_above_avg >= 70 THEN 'Premuim'
+        WHEN persent_above_avg BETWEEN 40 AND 70 THEN 'Medium'
+        ELSE 'Low'
+    END AS segment
+FROM persentage
+Order BY persent_above_avg DESC
 
 
 
