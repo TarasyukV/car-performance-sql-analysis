@@ -150,3 +150,6 @@ Speed Difference = Average Brand 0–60 Time − Fastest Model 0–60 Time
 
 - Brands with smaller acceleration differences demonstrate more consistent performance engineering across their model range(Tesla, Bugatti, Acura, Rolls-Royce etc.).
 
+
+Results are available in the `/results` directory.
+
