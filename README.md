@@ -132,8 +132,9 @@ percentage_above_avg = (luxury_cars(cars with above market average price) ÷ tot
 ## Which models are the fastest within each brand, and how do they compare to the brand’s average acceleration?
 
 ## Created Metric:
-To identify each brand’s flagship performance model, a window function (ROW_NUMBER()) was used: 
-ROW_NUMBER() OVER (PARTITION BY car_make ORDER BY zero_to_sixty_time ASC) 
+To identify each brand’s flagship performance model, a window function (ROW_NUMBER()) was used:
+
+- ROW_NUMBER() OVER (PARTITION BY car_make ORDER BY zero_to_sixty_time ASC) 
 
 Additionally:
 
