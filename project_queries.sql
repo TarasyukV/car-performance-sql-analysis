@@ -86,7 +86,7 @@ ORDER BY FLOOR(horsepower/100);
 
 /* ====================================================
 Business Question 5:
-How does horsepower influence non electric vehicle pricing across different performance segments?
+What percentage of each brand’s models are priced above the overall market average?
 ==================================================== */
 
 WITH ap AS (
