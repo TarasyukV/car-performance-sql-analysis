@@ -126,5 +126,43 @@ SELECT
 FROM persentage
 Order BY percentage_above_avg DESC
 
+/* ====================================================
+Business Question 6:
+Which models are the fastest within each brand, and how do they compare to the brand’s average acceleration?
+==================================================== */
 
+With r as 
+(
+Select
+	car_make
+	, car_model 
+	, year
+	, zero_to_sixty_time   
+	, ROW_NUMBER() OVER ( Partition by car_make Order BY zero_to_sixty_time) as ranked_model 
+	FROM cars 
+	Where zero_to_sixty_time IS NOT NULL 
+)
+, avg_s as 
+(
+Select 
+	COUNT(*) as total_cars
+	, car_make 
+	, ROUND(avg(zero_to_sixty_time),2) as avg_speed_per_brand 
+FROM cars 
+Where zero_to_sixty_time IS NOT NULL 
+Group by car_make
+Having COUNT(*) > 3 
+)
+
+Select
+	r. car_make 
+	, car_model 
+	, year
+	, zero_to_sixty_time
+	, avg_speed_per_brand 
+	, avg_speed_per_brand - r.zero_to_sixty_time as speed_diff 
+FROM r
+JOIN avg_s a 
+ON r.car_make = a.car_make
+Where ranked_model = 1 
 
