@@ -127,3 +127,25 @@ percentage_above_avg = (luxury_cars(cars with above market average price) ÷ tot
 - Brands below 40% are Low, mostly offering models under the market average price.
 
 - This analysis helps identify which brands are positioned as premium versus mainstream in terms of pricing.
+
+# Business Question 6
+## Which models are the fastest within each brand, and how do they compare to the brand’s average acceleration?
+
+## Created Metric:
+To identify each brand’s flagship performance model, a window function (ROW_NUMBER()) was used: 
+ROW_NUMBER() OVER (PARTITION BY car_make ORDER BY zero_to_sixty_time ASC) 
+
+Additionally:
+
+- The average 0–60 acceleration time was calculated per brand.
+- A new metric was created:
+Speed Difference = Average Brand 0–60 Time − Fastest Model 0–60 Time
+
+## 📈 Key Insight
+
+- Each brand’s flagship model is clearly identifiable.
+
+- Brands with large acceleration gaps between the flagship and the rest of the lineup (Nissan, Porsche, Maserati, Lotus, Chevrolet) often have a wider variety of models in terms of speed, with one high-performance star and other models
+
+- Brands with smaller acceleration differences demonstrate more consistent performance engineering across their model range(Tesla, Bugatti, Acura, Rolls-Royce etc.).
+
