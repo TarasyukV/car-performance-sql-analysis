@@ -111,7 +111,7 @@ To ensure statistical reliability:
 - Vehicles exceeding 1200 HP show extreme price escalation, suggesting ultra-exclusive positioning.
 
 # Business Question 5
-## What percentage of each brand’s models are priced above the overall market average? 
+## What percentage of each brand’s models are priced above the overall market average?
 
 ## Created Metric:
 Calculated the proportion of models for each brand that are priced above the market-wide average price.
