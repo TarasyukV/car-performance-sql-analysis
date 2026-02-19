@@ -1,0 +1,81 @@
+"car_make","car_model","year","horsepower","horsepower_diff","price_in_usd","price_diff"
+"Acura","NSX",2021,573,0,157500,0
+"Acura","NSX",2022,573,0,157500,0
+"Alfa Romeo","4C Spider",2020,237,0,67150,0
+"Alfa Romeo","Giulia Quadrifoglio",2021,505,268,75250,8100
+"Alfa Romeo","Giulia Quadrifoglio",2022,505,0,81250,6000
+"Alpine","A110",2021,288,0,71500,0
+"Ariel","Atom",2021,320,0,75000,0
+"Aston Martin","DBS Superleggera",2021,715,0,304995,0
+"Aston Martin","DBS Superleggera",2022,715,0,314500,9505
+"Audi","RS7",2021,591,0,115000,0
+"Audi","RS7",2022,591,0,114000,-1000
+"Bentley","Continental GT",2021,626,0,218400,0
+"Bentley","Continental GT Speed",2022,650,24,300000,81600
+"BMW","M5",2021,600,0,103500,0
+"BMW","M8",2022,617,17,130000,26500
+"Bugatti","Chiron Super Sport 300+",2021,1578,0,5200000,0
+"Bugatti","Chiron Super Sport 300+",2022,1578,0,5200000,0
+"Chevrolet","Camaro ZL1",2021,650,0,62500,0
+"Chevrolet","Camaro ZL1",2022,650,0,69000,6500
+"Chevrolet","Corvette Z06",2023,625,-25,85000,16000
+"Dodge","Viper ACR",2017,645,0,126190,0
+"Dodge","Challenger SRT Hellcat Redeye",2021,797,152,80190,-46000
+"Dodge","Challenger SRT Hellcat Redeye",2022,797,0,80190,0
+"Ferrari","SF90 Stradale",2021,986,0,625000,0
+"Ferrari","SF90 Stradale",2022,986,0,625000,0
+"Ford","GT",2021,660,0,500000,0
+"Ford","Mustang Shelby GT500",2022,760,100,81000,-419000
+"Jaguar","F-Type",2021,575,0,103200,0
+"Jaguar","F-Type R",2022,575,0,103200,0
+"Kia","Stinger",2022,368,0,52200,0
+"Koenigsegg","Jesko",2021,1280,0,2800000,0
+"Koenigsegg","Jesko",2022,1600,320,3000000,200000
+"Lamborghini","Aventador SVJ",2020,770,0,573966,0
+"Lamborghini","Sián",2021,819,49,3600000,3026034
+"Lamborghini","Aventador",2022,770,-49,393695,-3206305
+"Lexus","LC",2021,471,0,92950,0
+"Lexus","LC 500",2022,471,0,92950,0
+"Lotus","Evora GT",2020,416,0,96950,0
+"Lotus","Evora GT",2021,416,0,99000,2050
+"Lotus","Evija",2022,1972,1556,2700000,2601000
+"Maserati","GranTurismo",2019,454,0,150980,0
+"Maserati","GranTurismo",2020,454,0,150000,-980
+"Maserati","MC20",2021,621,167,210000,60000
+"Maserati","GranTurismo",2022,454,-167,134300,-75700
+"Mazda","MX-5 Miata",2021,181,0,26830,0
+"McLaren","Senna",2019,789,0,1050000,0
+"McLaren","Senna",2020,789,0,1500000,450000
+"McLaren","Speedtail",2021,1035,246,2300000,800000
+"McLaren","Artura",2022,671,-364,225000,-2075000
+"Mercedes-AMG","GT Black Series",2021,720,0,325000,0
+"Mercedes-AMG","C 63 S Coupe",2022,503,-217,80900,-244100
+"Mercedes-Benz","SLS AMG Black Series",2014,622,0,275000,0
+"Mercedes-Benz","SLS AMG",2015,622,0,229000,-46000
+"Mercedes-Benz","CLS63 AMG",2019,603,-19,132000,-97000
+"Mercedes-Benz","SLC 43",2020,385,-218,62000,-70000
+"Mercedes-Benz","SLS AMG",2021,730,345,250000,188000
+"Mercedes-Benz","AMG C63",2022,503,-227,69900,-180100
+"Nissan","370Z Nismo",2020,350,0,45790,0
+"Nissan","GT-R Nismo",2021,600,250,212000,166210
+"Nissan","400Z",2023,400,-200,40000,-172000
+"Pagani","Huayra",2020,720,0,2700000,0
+"Pagani","Huayra BC",2021,791,71,2600000,-100000
+"Pagani","Huayra",2022,764,-27,2800000,200000
+"Polestar","1",2021,600,0,155000,0
+"Porsche","918 Spyder",2015,887,0,1800000,0
+"Porsche","Taycan Turbo S",2021,750,-137,185000,-1615000
+"Porsche","911 Turbo S",2022,640,-110,208000,23000
+"Rimac","C_Two",2022,1914,0,2400000,0
+"Rolls-Royce","Wraith",2021,624,0,335550,0
+"Rolls-Royce","Wraith",2022,624,0,330000,-5550
+"Shelby","Cobra",1965,435,0,1000000,0
+"Subaru","WRX STI",2021,310,0,38170,0
+"Subaru","WRX STI",2022,310,0,38170,0
+"Toyota","Supra",2021,382,0,43000,0
+"Toyota","GR Supra",2022,382,0,43090,90
+"TVR","Griffith",2021,500,0,157500,0
+"TVR","Griffith",2022,500,0,123500,-34000
+"Ultima","RS",2021,1200,0,220000,0
+"W Motors","Lykan Hypersport",2015,780,0,3400000,0
+"W Motors","Fenyr SuperSport",2022,800,20,1550000,-1850000
