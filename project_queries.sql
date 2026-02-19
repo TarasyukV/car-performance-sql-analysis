@@ -105,7 +105,7 @@ WITH ap AS (
     FROM cars
     GROUP BY car_make)
     
-, persentage as (
+, percentage as (
     SELECT 
 	car_make
 	, total_cars 
@@ -155,7 +155,7 @@ Having COUNT(*) > 3
 )
 
 Select
-	r. car_make 
+	r.car_make 
 	, car_model 
 	, year
 	, zero_to_sixty_time
@@ -166,3 +166,43 @@ JOIN avg_s a
 ON r.car_make = a.car_make
 Where ranked_model = 1 
 
+/* ====================================================
+Business Question 7:
+How do top-performing models evolve over time for each brand?
+==================================================== */
+
+WITH tm AS (
+    SELECT
+        car_make,
+        car_model,
+        year,
+       	horsepower,
+		price_in_usd, 
+		zero_to_sixty_time, 
+        ROW_NUMBER() OVER (PARTITION BY car_make, year ORDER BY horsepower DESC) AS ranked
+    FROM cars
+	Where engine_type <> 'Electric'
+)
+, top_cars AS (
+    SELECT
+        car_make,
+        car_model,
+        year,
+        horsepower,
+		price_in_usd, 
+		zero_to_sixty_time
+    FROM tm
+    WHERE ranked = 1
+)
+
+SELECT
+    car_make,
+    car_model,
+    year,
+    horsepower,
+	COALESCE(horsepower - LAG(horsepower) OVER (PARTITION BY car_make ORDER BY year), 0) AS horsepower_diff, 
+	price_in_usd, 
+	COALESCE(price_in_usd - LAG(price_in_usd) OVER (PARTITION BY car_make ORDER BY year), 0) AS price_diff
+	
+FROM top_cars
+ORDER BY car_make, year
