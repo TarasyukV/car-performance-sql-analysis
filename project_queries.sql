@@ -47,13 +47,11 @@ Which automotive brands demonstrate the highest performance efficiency?
 ============================================================ */
 
 SELECT 
-    car_make,
-    ROUND(AVG(horsepower),2) AS avg_hp,
-    ROUND(AVG(zero_to_sixty_time),2) AS avg_speed,
-    ROUND(
-        AVG(horsepower) / AVG(zero_to_sixty_time),
-    2) AS performance_index,
-    COUNT(*) AS model_count
+    car_make
+    , ROUND(AVG(horsepower),2) AS avg_hp
+    , ROUND(AVG(zero_to_sixty_time),2) AS avg_speed
+    , ROUND(AVG(horsepower) / AVG(zero_to_sixty_time),2) AS performance_index
+    , COUNT(*) AS model_count
 FROM cars
 WHERE engine_type <> 'Electric'
   AND horsepower IS NOT NULL
@@ -69,13 +67,9 @@ How does horsepower influence vehicle pricing across different performance segme
 ==================================================== */
 
 SELECT 
-    CONCAT(
-        FLOOR(horsepower/100)*100, 
-        '-', 
-        FLOOR(horsepower/100)*100 + 99
-    ) AS hp_group,
-    ROUND(AVG(price_in_usd), 0) AS avg_price,
-	COUNT(*) AS car_count
+    CONCAT(FLOOR(horsepower/100)*100,'-',FLOOR(horsepower/100)*100 + 99) AS hp_group
+    , ROUND(AVG(price_in_usd), 0) AS avg_price
+	, COUNT(*) AS car_count
 FROM cars
 WHERE horsepower IS NOT NULL
   AND price_in_usd IS NOT NULL
@@ -95,13 +89,9 @@ WITH ap AS (
 			
 , totalcars AS (
     SELECT 
-        car_make,
-        COUNT(*) AS total_cars,
-        SUM(CASE 
-                WHEN price_in_usd > (SELECT avg_price FROM ap) 
-                THEN 1 
-                ELSE 0 
-            END) AS luxury_cars
+        car_make
+        , COUNT(*) AS total_cars
+        , SUM(CASE WHEN price_in_usd > (SELECT avg_price FROM ap) THEN 1 ELSE 0 END) AS luxury_cars
     FROM cars
     GROUP BY car_make) 
     
@@ -114,11 +104,11 @@ WITH ap AS (
     FROM totalcars )
    
 SELECT
-    car_make,
-    total_cars,
-    luxury_cars,
-    percentage_above_avg,
-    CASE 
+    car_make
+    , total_cars
+    , luxury_cars
+    , percentage_above_avg
+    , CASE 
         WHEN percentage_above_avg >= 70 THEN 'Premium'
         WHEN percentage_above_avg BETWEEN 40 AND 70 THEN 'Medium'
         ELSE 'Low'
@@ -173,36 +163,35 @@ How do top-performing models evolve over time for each brand?
 
 WITH tm AS (
     SELECT
-        car_make,
-        car_model,
-        year,
-       	horsepower,
-		price_in_usd, 
-		zero_to_sixty_time, 
-        ROW_NUMBER() OVER (PARTITION BY car_make, year ORDER BY horsepower DESC) AS ranked
+        car_make
+        , car_model
+        , year
+       	, horsepower
+		, price_in_usd
+		, zero_to_sixty_time 
+        , ROW_NUMBER() OVER (PARTITION BY car_make, year ORDER BY horsepower DESC) AS ranked
     FROM cars
 	Where engine_type <> 'Electric'
 )
 , top_cars AS (
     SELECT
-        car_make,
-        car_model,
-        year,
-        horsepower,
-		price_in_usd, 
-		zero_to_sixty_time
+        car_make
+        , car_model
+        , year
+        , horsepower
+		, price_in_usd
+		, zero_to_sixty_time
     FROM tm
     WHERE ranked = 1
 )
 
 SELECT
-    car_make,
-    car_model,
-    year,
-    horsepower,
-	COALESCE(horsepower - LAG(horsepower) OVER (PARTITION BY car_make ORDER BY year), 0) AS horsepower_diff, 
-	price_in_usd, 
-	COALESCE(price_in_usd - LAG(price_in_usd) OVER (PARTITION BY car_make ORDER BY year), 0) AS price_diff
-	
+    car_make
+    , car_model
+    , year
+    , horsepower
+	, COALESCE(horsepower - LAG(horsepower) OVER (PARTITION BY car_make ORDER BY year), 0) AS horsepower_diff, 
+	, price_in_usd, 
+	, COALESCE(price_in_usd - LAG(price_in_usd) OVER (PARTITION BY car_make ORDER BY year), 0) AS price_diff
 FROM top_cars
 ORDER BY car_make, year
