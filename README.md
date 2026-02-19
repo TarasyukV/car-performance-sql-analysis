@@ -36,6 +36,10 @@ Before performing the analysis, several data cleaning and transformation steps w
 
 These steps ensured consistent data types and improved data quality for reliable analytical results.
 
+## Business Questions
+
+Results for all queries are available in the [/results](results/) directory.
+
 
 # Business Question 1  
 ## Which automotive brands have the widest product range in terms of pricing and performance?
@@ -156,5 +160,5 @@ Speed Difference = Average Brand 0–60 Time − Fastest Model 0–60 Time
 - Price fluctuations: Price changes often align with horsepower gains, as seen in Lotus Evija and 
 - Models with steady performance: Certain top models remain technically unchanged but change market price through redesigns or special editions.
 
-[Results are available in the `/results` directory](./results)
+
 
