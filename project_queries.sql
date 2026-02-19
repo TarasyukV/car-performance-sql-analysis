@@ -103,7 +103,7 @@ WITH ap AS (
                 ELSE 0 
             END) AS luxury_cars
     FROM cars
-    GROUP BY car_make) -- total cars with price over maket average 
+    GROUP BY car_make) 
     
 , percentage as (
     SELECT 
