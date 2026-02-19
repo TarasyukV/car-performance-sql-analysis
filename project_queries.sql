@@ -90,7 +90,7 @@ What percentage of each brand’s models are priced above the overall market ave
 ==================================================== */
 
 WITH ap AS (
-    SELECT AVG(price_in_usd) AS avg_price
+    SELECT AVG(price_in_usd) AS avg_price 
     FROM cars)
 			
 , totalcars AS (
@@ -103,7 +103,7 @@ WITH ap AS (
                 ELSE 0 
             END) AS luxury_cars
     FROM cars
-    GROUP BY car_make)
+    GROUP BY car_make) -- total cars with price over maket average 
     
 , percentage as (
     SELECT 
