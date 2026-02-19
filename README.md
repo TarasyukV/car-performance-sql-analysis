@@ -45,7 +45,7 @@ These steps ensured consistent data types and improved data quality for reliable
 - Horsepower Range = Max(horsepower) − Min(horsepower) per brand  
 - Only brands with more than 5 models were included to ensure statistical relevance
 
-## 📈 Key Insights
+## 📈 Key Insights:
 
 - Certain brands demonstrate a significantly wider price range, indicating diversified market positioning.
 - Brands with both high price and horsepower dispersion appear to target multiple customer segments, from entry-level performance to ultra-premium models.
@@ -58,7 +58,7 @@ These steps ensured consistent data types and improved data quality for reliable
 High-Performance Percentage (%) =
 (Number of models with horsepower > 700 × 100 ÷ Total models per brand) 
 
-## 📈 Key Insights
+## 📈 Key Insights:
 
 - Brands with a high percentage are heavily focused on ultra-performance vehicles.
 - Lower percentages indicate either broader market positioning or mass-segment orientation.
@@ -69,11 +69,9 @@ High-Performance Percentage (%) =
 
 ## Created Metric
 
-To evaluate performance efficiency, a custom **Performance Index** was developed:
-
-Performance Index = AVG(Horsepower) ÷ AVG(0–60 Time)
-
-This metric measures how much average power output a brand generates per second of acceleration.
+- To evaluate performance efficiency, a custom **Performance Index** was developed:
+- Performance Index = AVG(Horsepower) ÷ AVG(0–60 Time)
+- This metric measures how much average power output a brand generates per second of acceleration.
 
 ### Why this metric?
 
@@ -86,26 +84,26 @@ To ensure statistical reliability:
 - Records with missing horsepower or acceleration values were excluded.
 - Brands with fewer than 3 models were filtered out.
 
-## 📈 Key Insights
+## 📈 Key Insights:
 
 - Hypercar manufacturers dominate performance efficiency rankings. Rimac, Bugatti, and Koenigsegg significantly outperform traditional luxury performance brands, with index values often 2–4x higher.
-
 - A clear performance tier structure exists in the market. Hypercar brands form a distinct upper segment, followed by luxury performance manufacturers.
-
 - Brands with broader portfolios tend to show lower performance intensity. This suggests a strategic balance between performance, scalability, and market positioning.
 
 # Business Question 4
 ## How does horsepower influence non electric vehicle pricing across different performance segments?
 
 ## Created Metric
-Horsepower groups (100 HP intervals) to identify price behavior across performance tiers.
+
+- Horsepower groups (100 HP intervals) to identify price behavior across performance tiers.
 
 To ensure statistical reliability:
 - Only non-electric vehicles were included.
 - Records with missing horsepower values were excluded.
 - Brands with fewer than 5 models were filtered out.
 
-## 📈 Key Insights
+## 📈 Key Insights:
+
 - Average vehicle price increases gradually up to the 600 HP range.
 - A sharp price acceleration occurs beyond 700 HP, indicating entry into a premium / hypercar segment.
 - Vehicles exceeding 1200 HP show extreme price escalation, suggesting ultra-exclusive positioning.
@@ -114,18 +112,15 @@ To ensure statistical reliability:
 ## What percentage of each brand’s models are priced above the overall market average?
 
 ## Created Metric:
-Calculated the proportion of models for each brand that are priced above the market-wide average price.
 
-percentage_above_avg = (luxury_cars(cars with above market average price) ÷ total cars by brand) × 100
+- Calculated the proportion of models for each brand that are priced above the market-wide average price.
+- percentage_above_avg = (luxury_cars(cars with above market average price) ÷ total cars by brand) × 100
 
 ## 📈 Key Insights:
 
 - Brands with a high percentage (≥70%) of models above average are classified as Premium, indicating strong pricing power.
-
 - Brands in the 40–70% range are Medium, showing a balanced mix of standard and above-average pricing.
-
 - Brands below 40% are Low, mostly offering models under the market average price.
-
 - This analysis helps identify which brands are positioned as premium versus mainstream in terms of pricing.
 
 # Business Question 6
@@ -142,14 +137,24 @@ Additionally:
 - A new metric was created:
 Speed Difference = Average Brand 0–60 Time − Fastest Model 0–60 Time
 
-## 📈 Key Insight
+## 📈 Key Insights:
 
 - Each brand’s flagship model is clearly identifiable.
-
 - Brands with large acceleration gaps between the flagship and the rest of the lineup (Nissan, Porsche, Maserati, Lotus, Chevrolet) often have a wider variety of models in terms of speed, with one high-performance star and other models
-
 - Brands with smaller acceleration differences demonstrate more consistent performance engineering across their model range(Tesla, Bugatti, Acura, Rolls-Royce etc.).
 
+# Business Question 7 
+## How do top-performing models evolve over time for each brand?
+
+## Created Metric: 
+- Top model per brand for each year based on highest horsepower
+- Difference in horsepower and price from previous year using LAG()
+
+## 📈 Key Insights:
+- Flagship stability: Out of 80 entries, 54 top models show no change in horsepower (horsepower_diff = 0) year over year, such as Acura NSX and Ferrari SF90 Stradale.
+- Sharp horsepower jumps: Some brands, like Koenigsegg and Lotus, show significant increases in horsepower with new models or upgrades.
+- Price fluctuations: Price changes often align with horsepower gains, as seen in Lotus Evija and 
+- Models with steady performance: Certain top models remain technically unchanged but change market price through redesigns or special editions.
 
 [Results are available in the `/results` directory](./results)
 
